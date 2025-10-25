@@ -1,7 +1,7 @@
 # Linkare dinamică
 
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
-Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
+Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime*).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
 Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / linker dinamic.
@@ -13,7 +13,7 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
-Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
+Similar exemplului din directorul `05-static/`, folosim comanda `make` pentru a obține executabilul `main`:
 
 ```console
 [..]/06-dynamic$ ls
@@ -186,4 +186,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
