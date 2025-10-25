@@ -1,0 +1,16 @@
+title: Test
+description: A simple site using a Jekyll theme
+baseurl: "" # leave empty unless your site is in a subdirectory
+url: "https://mihneagrigore.github.io/workshop-markdown/" # replace with your actual site URL
+
+# Theme configuration
+theme: minima  # or any theme gem name, e.g., "jekyll-theme-cayman", "jekyll-theme-slate"
+
+# Optional: plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown and formatting options
+markdown: kramdown
+highlighter: rouge
